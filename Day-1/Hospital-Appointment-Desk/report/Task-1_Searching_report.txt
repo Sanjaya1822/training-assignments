@@ -1,0 +1,27 @@
+# Task 1 – Linear Search vs Binary Search
+
+**Objective:** To implement Linear Search and Binary Search on 20,000 patient records and measure the execution time for 1,000 lookups.
+
+### Results
+
+| Details | Linear Search | Binary Search |
+|---|---:|---:|
+| Patient Records | 20,000 | 20,000 |
+| Lookups | 1,000 | 1,000 |
+| Records Found | 1,000 | 1,000 |
+| Execution Time | 11,128,900 ns | 1,560,100 ns |
+| Time Complexity | O(n) | O(log n) |
+
+### Explanation
+
+Linear Search checks patient records one by one until the required Patient ID is found.
+
+Binary Search repeatedly divides the sorted records into two halves to find the required Patient ID.
+
+Binary Search was faster than Linear Search in this experiment because it requires fewer comparisons.
+
+### Conclusion
+
+Binary Search is more efficient than Linear Search when searching large amounts of sorted data.
+
+**Note:** Binary Search requires sorted patient records.

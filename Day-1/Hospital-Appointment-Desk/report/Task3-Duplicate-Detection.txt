@@ -1,0 +1,20 @@
+# Task 3 – Duplicate Appointment Detection
+
+**Objective:** To prevent the same patient from booking multiple appointments for the same time slot.
+
+**Concept Used:** HashMap (Key-Value Pair)
+
+**Implementation:**
+- Patient ID and time slot are combined to create a unique key.
+- `containsKey()` checks whether the appointment already exists.
+- `put()` stores a new appointment.
+- If the key already exists, the appointment is rejected as a duplicate.
+
+**Output:**
+```text
+Appointment booked: 101_09:00
+Appointment booked: 102_09:00
+Duplicate appointment: 101_09:00
+```
+
+**Conclusion:** HashMap successfully detects duplicate appointments and prevents the same patient from booking the same time slot twice.

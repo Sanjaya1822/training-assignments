@@ -1,0 +1,55 @@
+# Task 2 – Selection Sort vs Quick Sort
+
+## Objective
+To sort hospital appointments based on urgency level and arrival time using Selection Sort and Quick Sort, and compare the number of swaps performed by both algorithms.
+
+## Sorting Rules
+- Urgency 1 – High Priority
+- Urgency 2 – Medium Priority
+- Urgency 3 – Low Priority
+- For appointments with the same urgency, the earlier arrival time is given priority.
+
+## Sample Input
+
+| Patient | Urgency | Arrival Time |
+|---|---:|---|
+| Arun | 3 | 10:00 |
+| Priya | 1 | 09:30 |
+| Kumar | 2 | 09:00 |
+| Ravi | 1 | 09:00 |
+| Divya | 3 | 09:15 |
+
+## Sorted Output
+
+| Patient | Urgency | Arrival Time |
+|---|---:|---|
+| Ravi | 1 | 09:00 |
+| Priya | 1 | 09:30 |
+| Kumar | 2 | 09:00 |
+| Divya | 3 | 09:15 |
+| Arun | 3 | 10:00 |
+
+## Algorithm Comparison
+
+| Criteria | Selection Sort | Quick Sort |
+|---|---|---|
+| Average Time Complexity | O(n²) | O(n log n) |
+| Worst Time Complexity | O(n²) | O(n²) |
+| Number of Swaps | 2 | 6 |
+| Result | Correct | Correct |
+
+## Explanation
+
+**Selection Sort:**
+Selection Sort finds the appointment with the highest priority in the remaining unsorted portion and places it in the correct position. It performed 2 swaps.
+
+**Quick Sort:**
+Quick Sort selects a pivot and divides appointments into smaller sections based on urgency and arrival time. It performed 6 swaps.
+
+Both algorithms produced the same sorted output.
+
+## Conclusion
+
+Both sorting algorithms successfully sorted the hospital appointments according to urgency and arrival time. Selection Sort performed fewer swaps for the given sample, while Quick Sort generally provides better average-case performance for larger datasets.
+
+Note: Runtime was not measured. Swap counts depend on the input order and implementation.

@@ -1,0 +1,33 @@
+# Task 5 – Maximum Appointments Using Dynamic Programming and Greedy Approach
+
+**Objective:** To find the maximum number of non-overlapping appointments a doctor can attend.
+
+**Concept Used:**
+- Dynamic Programming
+- Greedy Algorithm
+
+**Implementation:**
+- Dynamic Programming checks both include and exclude options and stores the results in an array.
+- Greedy Approach selects the next compatible appointment with the earliest finishing time.
+- Appointments are arranged by ending time before applying both approaches.
+
+**Sample Input:**
+```text
+Start: 1, 2, 4, 6, 5, 8
+End:   3, 5, 6, 7, 8, 9
+```
+
+**Output:**
+```text
+Dynamic Programming: 4
+Greedy Approach: 4
+```
+
+**Comparison:**
+
+| Approach | Time Complexity |
+|---|---|
+| Dynamic Programming | O(n²) |
+| Greedy | O(n) for already sorted appointments |
+
+**Conclusion:** Both approaches successfully found the maximum of 4 non-overlapping appointments. Greedy is more efficient for this problem when appointments are sorted by ending time.

@@ -1,0 +1,23 @@
+# Task 4 – Stack and Queue Implementation
+
+**Objective:** To manage hospital walk-in patients and recently viewed patient records using Stack and Queue.
+
+**Concept Used:**
+- **Queue (FIFO):** First In, First Out. Used to serve walk-in patients in arrival order.
+- **Stack (LIFO):** Last In, First Out. Used to manage recently viewed patients.
+
+**Implementation:**
+- Implemented Queue using an array with `enqueue()` and `dequeue()` operations.
+- Implemented Stack using an array with `push()` and `pop()` operations.
+- Added checks for full and empty conditions.
+
+**Output:**
+```text
+===== QUEUE =====
+Served: Arun
+
+===== STACK =====
+Recently viewed: Ravi
+```
+
+**Conclusion:** Stack and Queue were successfully implemented using arrays without built-in Java collections.
