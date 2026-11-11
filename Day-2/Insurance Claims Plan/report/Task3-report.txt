@@ -1,0 +1,52 @@
+## Task 3: Graphs – Claim Approval Stages
+
+### Objective
+To represent insurance claim approval stages using a directed graph, find the shortest path using BFS, and detect cycles using DFS.
+
+### Graph Structure
+
+```text
+Registration
+     |
+     v
+Assessment
+     |
+     v
+Surveyor
+     |
+     v
+Settlement
+```
+
+### Algorithms Used
+
+- **BFS (Breadth First Search):** Uses a Queue to find the shortest path between two stages.
+- **DFS (Depth First Search):** Uses recursion and visited tracking to detect cycles in the graph.
+
+### Expected Output
+
+```text
+Shortest Path: [Registration, Assessment, Surveyor, Settlement]
+Cycle Exists: false
+Cycle Exists After Adding Loop: true
+```
+
+### Test Cases
+
+| Test Case | Expected Result |
+|---|---|
+| Normal workflow | Shortest path found |
+| No loop | Cycle: false |
+| Add reverse connection | Cycle: true |
+| No path between stages | No path found |
+
+### Complexity Analysis
+
+| Operation | Time Complexity |
+|---|---|
+| BFS | O(V + E) |
+| DFS | O(V + E) |
+| Add Stage | O(1) average |
+| Add Connection | O(1) average |
+
+**Result:** Successfully implemented a directed graph using an adjacency list. BFS finds the shortest path, and DFS detects cycles in the claim approval workflow.

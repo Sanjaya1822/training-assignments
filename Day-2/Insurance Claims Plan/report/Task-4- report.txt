@@ -1,0 +1,37 @@
+## Task 4: Sliding Window – Consecutive Claim Spikes
+
+### Objective
+To find the longest consecutive run of days on which the number of insurance claims exceeded 100.
+
+### Input
+`{80, 120, 150, 130, 90, 140, 160, 170}`
+
+### Expected Output
+```text
+Longest consecutive days: 3
+```
+
+### Approach
+- If claims are greater than 100, increment the count.
+- Otherwise, reset the count to zero.
+- Update the maximum count whenever a longer sequence is found.
+
+### Test Cases
+
+| Test Case | Expected Result |
+|---|---:|
+| Empty array | 0 |
+| All claims above 100 | 3 |
+| All claims below 100 | 0 |
+| Consecutive claims above 100 | 3 |
+| Claims equal to 100 | Not counted |
+
+### Complexity Analysis
+
+| Complexity | Value |
+|---|---|
+| Time | O(n) |
+| Space | O(1) |
+
+### Result
+Successfully identified the longest consecutive period during which daily insurance claims exceeded 100 using a single-pass counting approach.

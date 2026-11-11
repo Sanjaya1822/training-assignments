@@ -1,0 +1,55 @@
+## Task 1: Binary Search Tree (BST)
+
+### Objective
+To create a Binary Search Tree for storing insurance claim IDs and perform insertion, searching, and tree traversals.
+
+### Input
+`50, 30, 70, 20, 40, 60, 80`
+
+### BST Structure
+
+```text
+        50
+       /  \
+      30   70
+     / \   / \
+    20 40 60 80
+```
+
+### Traversal Results
+
+| Traversal | Output |
+|---|---|
+| Inorder | 20 30 40 50 60 70 80 |
+| Preorder | 50 30 20 40 70 60 80 |
+| Postorder | 20 40 30 60 80 70 50 |
+
+**Note:** Inorder traversal gives claim IDs in ascending order.
+
+### Search Results
+
+| Claim ID | Result |
+|---|---|
+| 40 | Found |
+| 90 | Not Found |
+
+### Test Cases
+
+| Test Case | Expected Result |
+|---|---|
+| Normal input | BST created successfully |
+| Empty input | Empty tree |
+| Duplicate ID | Duplicate ignored |
+| Existing ID | Found |
+| Missing ID | Not Found |
+
+### Time Complexity
+
+| Operation | Average Case | Worst Case |
+|---|---|---|
+| Insertion | O(log n) | O(n) |
+| Searching | O(log n) | O(n) |
+| Traversal | O(n) | O(n) |
+
+### Result
+Successfully implemented BST operations for insurance claim IDs. Inorder traversal displays the claim IDs in sorted order.

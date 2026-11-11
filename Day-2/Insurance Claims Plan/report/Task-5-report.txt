@@ -1,0 +1,41 @@
+## Task 5: Two Pointers – Merge Sorted Claim Lists
+
+### Objective
+To merge two sorted claim ID lists into a single sorted list without using an additional sorting algorithm.
+
+### Input
+```text
+Office 1: {10, 30, 50, 70}
+Office 2: {20, 40, 60, 80}
+```
+
+### Expected Output
+```text
+[10, 20, 30, 40, 50, 60, 70, 80]
+```
+
+### Approach
+- Use two pointers to compare elements from both arrays.
+- Insert the smaller element into the result array.
+- Move the corresponding pointer.
+- Copy any remaining elements from either array.
+
+### Test Cases
+
+| Test Case | Expected Result |
+|---|---|
+| Normal input | Sorted merged list |
+| First array empty | Second array copied |
+| Second array empty | First array copied |
+| Both arrays empty | Empty result |
+| Duplicate values | Duplicates retained |
+
+### Complexity Analysis
+
+| Complexity | Value |
+|---|---|
+| Time | O(n + m) |
+| Space | O(n + m) |
+
+### Result
+Successfully merged two sorted regional claim lists using the Two Pointers technique without performing additional sorting.

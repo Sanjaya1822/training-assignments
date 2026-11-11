@@ -1,0 +1,50 @@
+## Task 2: Hashing – Duplicate Claim Detection
+
+### Objective
+To detect duplicate insurance claims using HashSet based on policy number and incident date.
+
+### Approach
+- Convert policy numbers to lowercase.
+- Remove unnecessary spaces.
+- Combine policy number and incident date into a unique key.
+- Use HashSet to identify duplicate claims.
+
+### Sample Input
+
+| Policy Number | Incident Date |
+|---|---|
+| POL123 | 2026-11-10 |
+| pol123 | 2026-11-10 |
+| POL 123 | 2026-11-10 |
+| POL456 | 2026-11-11 |
+
+### Expected Output
+
+```text
+New Claim: POL123
+Duplicate Claim: pol123
+Duplicate Claim: POL 123
+New Claim: POL456
+```
+
+### Complexity Analysis
+
+| Operation | Time Complexity |
+|---|---|
+| Insertion | O(1) average |
+| Searching | O(1) average |
+| Duplicate Detection | O(n) overall |
+
+**Space Complexity:** O(n)
+
+### Result
+Successfully detected duplicate claims using HashSet. Hash collisions are handled internally using hashCode() and equals().
+
+How are hash collisions handled?
+A hash collision occurs when two different keys produce the same hash value.
+
+Java HashSet handles collisions internally:
+- It uses hashCode() to identify the storage location.
+- If multiple objects have the same hash value, it uses equals() to check whether they are actually equal.
+- If they are equal, the duplicate is not inserted.
+- If they are different, both can be stored.
