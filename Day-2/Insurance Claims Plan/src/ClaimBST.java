@@ -1,14 +1,3 @@
-class Node {
-    int data;
-    Node left, right;
-
-    Node(int value) {
-        data = value;
-        left = null;
-        right = null;
-    }
-}
-
 public class ClaimBST {
 
     Node root;
