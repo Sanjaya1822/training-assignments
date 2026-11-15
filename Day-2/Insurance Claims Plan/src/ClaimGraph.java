@@ -10,7 +10,7 @@ public class ClaimGraph {
         graph.get(from).add(to);
     }
 
-    // BFS - Shortest path
+    
     static void bfs(String start, String end) {
 
         Queue<String> q = new LinkedList<>();
