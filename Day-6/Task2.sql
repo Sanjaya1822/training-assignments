@@ -9,6 +9,7 @@ SELECT
     CONCAT(customer_name, ' - ', city) AS customer_details
 FROM customers;
 
+
 SELECT
     order_id,
     order_date,
@@ -19,6 +20,7 @@ SELECT
     order_id,
     DATE_FORMAT(order_date, '%d-%M-%Y') AS formatted_date
 FROM orders;
+
 
 SELECT
     product_name,
