@@ -1,0 +1,42 @@
+DAY 9 – SET 2: INSURANCE PREMIUM PROCESSING
+CURSOR VS SET-BASED COMPARISON
+
+1. Cursor approach
+The cursor fetches one unpaid, overdue policy at a time. For every policy,
+it updates the policy status to LAPSED, inserts a row into lapse_log, and
+increments the INOUT processed count. A NOT FOUND handler ends the loop
+when there are no more rows.
+
+2. Set-based approach
+The set-based approach uses INSERT ... SELECT to insert log rows for all
+matching policies and one UPDATE statement to mark all matching policies
+as LAPSED. ROW_COUNT() is used to add the number of inserted rows to the
+INOUT count.
+
+3. Comparison
+
+Criteria              Cursor                         Set-based
+Processing            One row at a time              Many rows in one statement
+Code                  More procedural                Shorter and simpler
+Performance           Usually slower for many rows   Usually faster for many rows
+Use case              Row-by-row special logic       Same operation for many rows
+Count                 Incremented per fetched row    Uses ROW_COUNT()
+
+4. Conclusion
+For this assignment, the set-based approach is preferred because the same
+status update and log insertion can be performed for all matching policies
+using SQL statements. A cursor is useful when each row needs different
+procedural processing. Actual execution time depends on data size, indexes,
+and server configuration; it should be measured on the same test data.
+
+5. Important assumptions
+- A policy is considered due for renewal when its end_date falls between
+  today and the next 30 days.
+- A pending claim prevents renewal.
+- A successful renewal increases the premium by 5%.
+- A 10% discount is applied to the increased premium if the policy has
+  zero claims of any status.
+- A policy is considered lapsed when payment_status is UNPAID and
+  payment_due_date is earlier than today.
+- The cursor and set-based alternatives should be tested separately on
+  equivalent fresh data to avoid processing the same policies twice.
